@@ -1,0 +1,10 @@
+from fastapi import APIRouter
+
+from app.schemas import AuthStatusResponse
+
+router = APIRouter(prefix="/auth", tags=["auth"])
+
+
+@router.get("/status", response_model=AuthStatusResponse)
+def auth_status() -> AuthStatusResponse:
+    return AuthStatusResponse(enabled=False, mode="placeholder-local")

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+dist/
+frontend/dist/
+coverage/
+.pytest_cache/
+
+# Local data and generated artifacts
+data/inputs/*
+!data/inputs/.gitkeep
+data/outputs/*
+!data/outputs/.gitkeep
+data/tmp/*
+!data/tmp/.gitkeep
+data/vector_store/*
+!data/vector_store/.gitkeep
+data/audit/*
+!data/audit/.gitkeep
+
+# Models and confidential docs
+models/
+*.bin
+*.safetensors
+*.pt
+*.onnx
+knowledge_base/**/confidential*
+*.key
+*.pem
+
+*.tsbuildinfo
